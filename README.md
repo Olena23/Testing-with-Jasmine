@@ -12,4 +12,3 @@ These tests include asynchronous tests.
 1. Downloaded all the required files
 2. Download/Clone the repo
 3. Open 'index.html' in your browser
-Enjoy!
