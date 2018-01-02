@@ -39,10 +39,10 @@ $(function() {
       });
       
       it('changes visibility when clicked', function () {
-        menuIcon.trigger('click');
+        menuIcon.click();
         bodyClass =$('body').hasClass('menu-hidden');
         expect(bodyClass).not.toBe(true);
-        menuIcon.trigger('click');
+        menuIcon.click();
         bodyClass =$('body').hasClass('menu-hidden');
         expect(bodyClass).toBe(true);
       });
@@ -54,7 +54,7 @@ $(function() {
       });
 
       it('have at least one entry within the .feed container', function () {
-        expect($('.feed .entry-link ').length).toBeGreaterThan(0);
+        expect($('.feed .entry').length).toBeGreaterThan(0);
       });
     });
 
