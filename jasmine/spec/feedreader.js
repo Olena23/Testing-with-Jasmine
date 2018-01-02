@@ -9,10 +9,6 @@
  * to ensure they don't run until the DOM is ready.
  */
 $(function() {
-    var bodyClass =$('body').hasClass('menu-hidden');
-    var menuIcon = $('.menu-icon-link');
-    var container = $('.feed');
-
     describe('RSS Feeds', function() {
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
@@ -35,6 +31,9 @@ $(function() {
     });
 
     describe('The menu', function () {
+      var bodyClass =$('body').hasClass('menu-hidden');
+      var menuIcon = $('.menu-icon-link');
+
       it('is hidden by default', function () {
         expect(bodyClass).toBe(true);
       });
@@ -55,7 +54,7 @@ $(function() {
       });
 
       it('have at least one entry within the .feed container', function () {
-        expect(container.length).toBeGreaterThan(0);
+        expect($('.feed .entry-link ').length).toBeGreaterThan(0);
       });
     });
 
